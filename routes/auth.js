@@ -26,8 +26,7 @@ function isEmailValid(email, errors) {
 function isPasswordValid(password, errors) {
   if (password === null || password.length < 1) {
     errors.push('Password not found');
-  }
-  if (password.length < MIN_PASSWORD_LENGTH) {
+  } else if (password.length < MIN_PASSWORD_LENGTH) {
     errors.push(`Password must be at least ${MIN_PASSWORD_LENGTH} characters long`);
   }
   return errors;
@@ -146,4 +145,12 @@ router.post('/logout', (req, res) => {
   res.sendStatus(200);
 })
 
-module.exports = router;
+module.exports = {
+  isEmailValid,
+  isPasswordValid,
+  isFirstNameValid,
+  isLastNameValid,
+  isGenderValid,
+  isUniversityValid,
+  router
+};

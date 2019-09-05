@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "test": "cd test && node test_all.js"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -23,5 +24,9 @@
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "really-need": "^1.9.2",
+    "supertest": "^4.0.2"
   }
 }
