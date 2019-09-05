@@ -3,13 +3,16 @@ var { areArraysEqual } = require('../utils/array_helpers');
 
 const expectedResults = [
   ['Email not found'],
+  ['Invalid email entered'],
   [],
   ['Password not found'],
   [`Password must be at least 6 characters long`],
   [],
   ['First name not found'],
+  ['First name uses invalid characters'],
   [],
   ['Last name not found'],
+  ['Last name uses invalid characters'],
   [],
   ['Gender not found'],
   [],
@@ -23,6 +26,14 @@ function testAuthValidation() {
 
   let errors = isEmailValid('', []);
   let testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isEmailValid('abc', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
   if (!testResult) {
     numErrors++;
   }
@@ -69,6 +80,14 @@ function testAuthValidation() {
   printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
   testNumber++;
 
+  errors = isFirstNameValid('Bob!!!', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
   errors = isFirstNameValid('Bob', []);
   testResult = areArraysEqual(errors, expectedResults[testNumber]);
   if (!testResult) {
@@ -78,6 +97,14 @@ function testAuthValidation() {
   testNumber++;
 
   errors = isLastNameValid('', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isLastNameValid('Smith!!!', []);
   testResult = areArraysEqual(errors, expectedResults[testNumber]);
   if (!testResult) {
     numErrors++;

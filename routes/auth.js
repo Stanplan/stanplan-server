@@ -15,10 +15,14 @@ var transporter = nodemailer.createTransport({
 const MIN_PASSWORD_LENGTH = 6;
 const GENDER_OPTIONS = ['male', 'female', 'non-binary', 'other', 'prefer not to say'];
 const UNIVERSITY_OPTIONS = ['stanford university'];
+const NAME_REGEX = /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s'.-]+$/;
+const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 function isEmailValid(email, errors) {
   if (email === null || email.length < 1) {
     errors.push('Email not found');
+  } else if (!EMAIL_REGEX.test(email)) {
+    errors.push('Invalid email entered');
   }
   return errors;
 }
@@ -35,6 +39,8 @@ function isPasswordValid(password, errors) {
 function isFirstNameValid(firstName, errors) {
   if (firstName === null || firstName.length < 1) {
     errors.push('First name not found');
+  } else if (!NAME_REGEX.test(firstName)) {
+    errors.push('First name uses invalid characters');
   }
   return errors;
 }
@@ -42,6 +48,8 @@ function isFirstNameValid(firstName, errors) {
 function isLastNameValid(lastName, errors) {
   if (lastName === null || lastName.length < 1) {
     errors.push('Last name not found');
+  } else if (!NAME_REGEX.test(lastName)) {
+    errors.push('Last name uses invalid characters');
   }
   return errors;
 }
