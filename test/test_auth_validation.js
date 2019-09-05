@@ -1,4 +1,4 @@
-var { isEmailValid, isPasswordValid, isFirstNameValid, isLastNameValid, isGenderValid, isUniversityValid } = require('../routes/auth');
+var { isEmailValid, isPasswordValid, isFirstNameValid, isLastNameValid, isGenderValid, isPhoneNumberValid, isUniversityValid } = require('../routes/auth');
 var { areArraysEqual } = require('../utils/array_helpers');
 
 const expectedResults = [
@@ -15,6 +15,9 @@ const expectedResults = [
   ['Last name uses invalid characters'],
   [],
   ['Gender not found'],
+  [],
+  [],
+  ['Invalid phone number entered'],
   [],
   ['University not found'],
   []
@@ -129,6 +132,30 @@ function testAuthValidation() {
   testNumber++;
 
   errors = isGenderValid('Male', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isPhoneNumberValid('', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isPhoneNumberValid('111-111-1111b', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isPhoneNumberValid('111-111-1111', []);
   testResult = areArraysEqual(errors, expectedResults[testNumber]);
   if (!testResult) {
     numErrors++;

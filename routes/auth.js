@@ -17,6 +17,7 @@ const GENDER_OPTIONS = ['male', 'female', 'non-binary', 'other', 'prefer not to 
 const UNIVERSITY_OPTIONS = ['stanford university'];
 const NAME_REGEX = /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s'.-]+$/;
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const PHONE_NUMBER_REGEX = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
 function isEmailValid(email, errors) {
   if (email === null || email.length < 1) {
@@ -61,6 +62,15 @@ function isGenderValid(gender, errors) {
   return errors;
 }
 
+function isPhoneNumberValid(phoneNumber, errors) {
+  if (phoneNumber === null || phoneNumber.length < 1) {
+    return errors; // End validation early because phone number is optional
+  } else if (!PHONE_NUMBER_REGEX.test(phoneNumber)) {
+    errors.push('Invalid phone number entered');
+  }
+  return errors;
+}
+
 function isUniversityValid(university, errors) {
   if (UNIVERSITY_OPTIONS.indexOf(university.toLowerCase()) < 0) {
     errors.push('University not found');
@@ -77,6 +87,7 @@ router.post('/signup', (req, res) => {
   errors = isFirstNameValid(firstName, errors);
   errors = isLastNameValid(lastName, errors);
   errors = isGenderValid(gender, errors);
+  errors = isPhoneNumberValid(phone, errors);
   errors = isUniversityValid(university, errors);
   if (errors.length > 0) {
     return res.status(400).json({ errors: errors });
@@ -159,6 +170,7 @@ module.exports = {
   isFirstNameValid,
   isLastNameValid,
   isGenderValid,
+  isPhoneNumberValid,
   isUniversityValid,
   router
 };
