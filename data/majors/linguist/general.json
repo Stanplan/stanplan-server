@@ -1,0 +1,227 @@
+[
+  {
+    "title": "Linguistics Requirements: Seminars",
+    "instructions": "You must take the following two courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 196",
+            "required": true
+          }
+        ],
+        "instructions": "Gateway course. To be taken Autumn Quarter, junior year."
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 197A",
+            "required": true
+          }
+        ],
+        "instructions": "Capstone course. To be taken Winter Quarter, senior year."
+      }
+    ]
+  },
+
+  {
+    "title": "Linguistics Requirements: Core",
+    "instructions": "Select at least one course each from two of the following three areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 105",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 205A",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 110",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Phonetics and Phonology"
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 121A",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 121B",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 222A",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Morphology and Syntax"
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 130A",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 230A",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 130B",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 230B",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 232A",
+            "required": false
+          }
+        ],
+        "instructions": "Semantics and Pragmatics"
+      }
+    ]
+  },
+
+  {
+    "title": "Linguistics Requirements: Breadth",
+    "instructions": "Select at least one course each from two of the following four areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 160",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 260A",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 260B",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Historical Linguistics and Language Change"
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 150",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 156",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 157",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 257",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 250",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Sociolinguistics"
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 35",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 140",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 145",
+            "required": false
+          }
+        ],
+        "instructions": "Psycholinguistics"
+      },
+      {
+        "subsection": [
+          {
+            "id": "LINGUIST 180",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 280",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 188",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 288",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 278",
+            "required": false
+          },
+          {
+            "id": "LINGUIST 284",
+            "required": false
+          }
+        ],
+        "instructions": "Computational Linguistics"
+      }
+    ]
+  },
+
+  {
+    "title": "Linguistics Requirements: Depth",
+    "instructions": "Select at least two 200-level Linguistics courses.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "numDefaultRows": 2
+      }
+    ]
+  },
+
+  {
+    "title": "Linguistics Requirements: Language",
+    "instructions": "You must complete six quarters of language coursework at Stanford or receive certification of equivalent proficiency through the Langauge Center or the relevant department.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "numDefaultRows": 6
+      }
+    ]
+  },
+
+  {
+    "title": "Linguistics Requirements: Electives",
+    "instructions": "In total, you must take at least 55 units of coursework for the Linguistics major; at least 28 of these units must be in Linguistics. No more than 12 units may be below the 100-level. If you have not yet taken at least 55 units of coursework, enter elective courses below. These units should form a coherent program of study.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "numDefaultRows": 1
+      }
+    ]
+  }
+]

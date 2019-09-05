@@ -1,0 +1,100 @@
+[
+  {
+    "title": "General Education Requirements: Thinking Matters",
+    "instructions": "Enter the Thinking Matters course which you have been assigned.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "numDefaultRows": 1
+      }
+    ]
+  },
+
+  {
+    "title": "General Education Requirements: Ways of Thinking / Ways of Doing",
+    "instructions": "Enter the WAYS-satisfying courses which you plan to take. Note: Each course must be a minimum of 3 units and taken for a letter grade.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Two courses in Aesthetic and Interpretive Inquiry (AII)",
+        "numDefaultRows": 2
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Two courses in Scientific Method and Analysis (SMA)",
+        "numDefaultRows": 2
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Two courses in Social Inquiry (SI)",
+        "numDefaultRows": 2
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "One course in Applied Quantitative Reasoning (AQR)",
+        "numDefaultRows": 1
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "One course in Creative Expression (CE)",
+        "numDefaultRows": 1
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "One course in Engaging Diversity (ED)",
+        "numDefaultRows": 1
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "One course in Ethical Reasoning (ER)",
+        "numDefaultRows": 1
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "One course in Formal Reasoning (FR)",
+        "numDefaultRows": 1
+      }
+    ]
+  },
+
+  {
+    "title": "General Education Requirements: Writing and Rhetoric",
+    "instructions": "Enter the two Writing and Rhetoric courses which you have been assigned.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Enter your PWR 1 course here (typically taken during freshman year).",
+        "numDefaultRows": 1
+      },
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Enter your PWR 2 course here (typically taken during sophomore year).",
+        "numDefaultRows": 1
+      }
+    ]
+  },
+
+  {
+    "title": "General Education Requirements: Language",
+    "instructions": "You are required to complete one year of college-level study (or the equivalent) in a foreign language.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions": "Enter one-year's worth of foreign language courses. Note: You can skip this section if you tested out of the foreign language requirement.",
+        "numDefaultRows": 1
+      }
+    ]
+  }
+]

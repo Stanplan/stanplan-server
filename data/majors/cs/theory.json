@@ -1,0 +1,466 @@
+[
+  {
+    "title": "Theory Track: Core, Part One",
+    "instructions": "You must take the following course.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 154",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Theory Track: Core, Part Two",
+    "instructions": "You must take one of the following courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 168",
+            "required": false
+          },
+          {
+            "id": "CS 255",
+            "required": false
+          },
+          {
+            "id": "CS 261",
+            "required": false
+          },
+          {
+            "id": "CS 264",
+            "required": false
+          },
+          {
+            "id": "CS 265",
+            "required": false
+          },
+          {
+            "id": "CS 268",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Theory Track: Core, Part Three",
+    "instructions": "You must take two additional courses from the list above or the following.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 143",
+            "required": false
+          },
+          {
+            "id": "CS 151",
+            "required": false
+          },
+          {
+            "id": "CS 155",
+            "required": false
+          },
+          {
+            "id": "CS 157",
+            "required": false
+          },
+          {
+            "id": "CS 166",
+            "required": false
+          },
+          {
+            "id": "CS 205L",
+            "required": false
+          },
+          {
+            "id": "CS 228",
+            "required": false
+          },
+          {
+            "id": "CS 233",
+            "required": false
+          },
+          {
+            "id": "CS 236",
+            "required": false
+          },
+          {
+            "id": "CS 242",
+            "required": false
+          },
+          {
+            "id": "CS 250",
+            "required": false
+          },
+          {
+            "id": "CS 251",
+            "required": false
+          },
+          {
+            "id": "CS 252",
+            "required": false
+          },
+          {
+            "id": "CS 254",
+            "required": false
+          },
+          {
+            "id": "CS 263",
+            "required": false
+          },
+          {
+            "id": "CS 269I",
+            "required": false
+          },
+          {
+            "id": "CS 352",
+            "required": false
+          },
+          {
+            "id": "CS 358",
+            "required": false
+          },
+          {
+            "id": "CS 359",
+            "required": false
+          },
+          {
+            "id": "CS 369",
+            "required": false
+          },
+          {
+            "id": "MS&E 310",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Theory Track: Electives",
+    "instructions": "You must take at least three additional courses from the lists above or from the following list.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 108",
+            "required": false
+          },
+          {
+            "id": "CS 124",
+            "required": false
+          },
+          {
+            "id": "CS 131",
+            "required": false
+          },
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "CS 141",
+            "required": false
+          },
+          {
+            "id": "CS 142",
+            "required": false
+          },
+          {
+            "id": "CS 143",
+            "required": false
+          },
+          {
+            "id": "CS 144",
+            "required": false
+          },
+          {
+            "id": "CS 145",
+            "required": false
+          },
+          {
+            "id": "CS 146",
+            "required": false
+          },
+          {
+            "id": "CS 147",
+            "required": false
+          },
+          {
+            "id": "CS 148",
+            "required": false
+          },
+          {
+            "id": "CS 149",
+            "required": false
+          },
+          {
+            "id": "CS 154",
+            "required": false
+          },
+          {
+            "id": "CS 155",
+            "required": false
+          },
+          {
+            "id": "CS 157",
+            "required": false
+          },
+          {
+            "id": "PHIL 151",
+            "required": false
+          },
+          {
+            "id": "CS 166",
+            "required": false
+          },
+          {
+            "id": "CS 168",
+            "required": false
+          },
+          {
+            "id": "CS 190",
+            "required": false
+          },
+          {
+            "id": "CS 205L",
+            "required": false
+          },
+          {
+            "id": "CS 210A",
+            "required": false
+          },
+          {
+            "id": "CS 217",
+            "required": false
+          },
+          {
+            "id": "CS 223A",
+            "required": false
+          },
+          {
+            "id": "CS 224N",
+            "required": false
+          },
+          {
+            "id": "CS 224S",
+            "required": false
+          },
+          {
+            "id": "CS 224U",
+            "required": false
+          },
+          {
+            "id": "CS 224W",
+            "required": false
+          },
+          {
+            "id": "CS 225A",
+            "required": false
+          },
+          {
+            "id": "CS 227B",
+            "required": false
+          },
+          {
+            "id": "CS 228",
+            "required": false
+          },
+          {
+            "id": "CS 229",
+            "required": false
+          },
+          {
+            "id": "CS 229T",
+            "required": false
+          },
+          {
+            "id": "CS 231A",
+            "required": false
+          },
+          {
+            "id": "CS 232",
+            "required": false
+          },
+          {
+            "id": "CS 233",
+            "required": false
+          },
+          {
+            "id": "CS 234",
+            "required": false
+          },
+          {
+            "id": "CS 238",
+            "required": false
+          },
+          {
+            "id": "CS 240",
+            "required": false
+          },
+          {
+            "id": "CS 242",
+            "required": false
+          },
+          {
+            "id": "CS 243",
+            "required": false
+          },
+          {
+            "id": "CS 244",
+            "required": false
+          },
+          {
+            "id": "CS 244B",
+            "required": false
+          },
+          {
+            "id": "CS 245",
+            "required": false
+          },
+          {
+            "id": "CS 246",
+            "required": false
+          },
+          {
+            "id": "CS 247",
+            "required": false
+          },
+          {
+            "id": "CS 248",
+            "required": false
+          },
+          {
+            "id": "CS 251",
+            "required": false
+          },
+          {
+            "id": "CS 252",
+            "required": false
+          },
+          {
+            "id": "CS 254",
+            "required": false
+          },
+          {
+            "id": "CS 255",
+            "required": false
+          },
+          {
+            "id": "CS 261",
+            "required": false
+          },
+          {
+            "id": "CS 263",
+            "required": false
+          },
+          {
+            "id": "CS 264",
+            "required": false
+          },
+          {
+            "id": "CS 265",
+            "required": false
+          },
+          {
+            "id": "CS 269I",
+            "required": false
+          },
+          {
+            "id": "CS 270",
+            "required": false
+          },
+          {
+            "id": "CS 272",
+            "required": false
+          },
+          {
+            "id": "CS 273A",
+            "required": false
+          },
+          {
+            "id": "CS 273B",
+            "required": false
+          },
+          {
+            "id": "CS 274",
+            "required": false
+          },
+          {
+            "id": "CS 246",
+            "required": false
+          },
+          {
+            "id": "CS 278",
+            "required": false
+          },
+          {
+            "id": "CS 279",
+            "required": false
+          },
+          {
+            "id": "CS 348B",
+            "required": false
+          },
+          {
+            "id": "CS 348C",
+            "required": false
+          },
+          {
+            "id": "CS 348K",
+            "required": false
+          },
+          {
+            "id": "CS 352",
+            "required": false
+          },
+          {
+            "id": "CS 369L",
+            "required": false
+          },
+          {
+            "id": "CME 108",
+            "required": false
+          },
+          {
+            "id": "EE 180",
+            "required": false
+          },
+          {
+            "id": "EE 282",
+            "required": false
+          },
+          {
+            "id": "EE 364A",
+            "required": false
+          },
+          {
+            "id": "CS 269G",
+            "required": false
+          },
+          {
+            "id": "CME 302",
+            "required": false
+          },
+          {
+            "id": "CME 305",
+            "required": false
+          },
+          {
+            "id": "PHIL 152",
+            "required": false
+          }
+        ],
+        "instructions" : "You must take at least 25 units in total for the Theory track."
+      }
+    ]
+  }
+]

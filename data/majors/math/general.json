@@ -1,0 +1,529 @@
+[
+  {
+    "title": "General Electrical Engineering Requirements: Mathematics",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "MATH 19",
+            "required": true
+          },
+          {
+            "id": "MATH 20",
+            "required": true
+          },
+          {
+            "id": "MATH 21",
+            "required": true
+          }
+        ],
+        "instructions": "These math courses are required. Note: You don't have to take these courses if you have AP Calculus credit."
+      },
+      {
+        "subsection": [
+          {
+            "id": "CME 100",
+            "required": false
+          },
+          {
+            "id": "CME 102",
+            "required": false
+          }
+        ],
+        "instructions": "Select either this course sequence or the following sequence."
+      },
+      {
+        "subsection": [
+          {
+            "id": "MATH 51",
+            "required": false
+          },
+          {
+            "id": "MATH 53",
+            "required": false
+          }
+        ],
+        "instructions": "Select either this course sequence or the previous sequence."
+      },
+      {
+        "subsection": [
+          {
+            "id": "EE 103",
+            "required": false
+          },
+          {
+            "id": "MATH 113",
+            "required": false
+          },
+          {
+            "id": "CS 103",
+            "required": false
+          }
+        ],
+        "instructions": "Select one of the following courses.",
+        "type": "radio"
+      },
+      {
+        "subsection": [
+          {
+            "id": "EE 178",
+            "required": false
+          },
+          {
+            "id": "CS 109",
+            "required": false
+          }
+        ],
+        "instructions": "Select one of the following courses.",
+        "type": "radio"
+      }
+    ]
+  },
+
+  {
+    "title": "General Electrical Engineering Requirements: Science",
+    "instructions": "Select at least 12 units.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "PHYSICS 41",
+            "required": false
+          },
+          {
+            "id": "EE 42",
+            "required": false
+          }
+        ],
+        "instructions": "Select either this course sequence or one of the other two sequences."
+      },
+      {
+        "subsection": [
+          {
+            "id": "PHYSICS 41",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 43",
+            "required": false
+          }
+        ],
+        "instructions": "Select either this course sequence or one of the other two sequences."
+      },
+      {
+        "subsection": [
+          {
+            "id": "PHYSICS 61",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 63",
+            "required": false
+          }
+        ],
+        "instructions": "Select either this course sequence or one of the other two sequences."
+      },
+      {
+
+        "subsection": [
+          {
+            "id": "PHYSICS 41",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 41E",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 21",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 61",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Select one of these Mechanics courses. Note: You don't have to take this course if you have AP Physics C: Mechanics credit."
+      },
+      {
+        "subsection": [
+          {
+            "id": "PHYSICS 43",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 23",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 63",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Select one of these Electricity and Magnetism courses. Note: You don't have to take this course if you have AP Physics C: E&M credit."
+      },
+      {
+        "subsection": [
+          {
+            "id": "BIO 81",
+            "required": false
+          },
+          {
+            "id": "BIO 82",
+            "required": false
+          },
+          {
+            "id": "BIO 83",
+            "required": false
+          },
+          {
+            "id": "BIO 84",
+            "required": false
+          },
+          {
+            "id": "BIO 85",
+            "required": false
+          },
+          {
+            "id": "BIO 86",
+            "required": false
+          },
+          {
+            "id": "BIO 45",
+            "required": false
+          },
+          {
+            "id": "BIO 46",
+            "required": false
+          },
+          {
+            "id": "BIO 47",
+            "required": false
+          },
+          {
+            "id": "BIO 30",
+            "required": false
+          },
+          {
+            "id": "BIO 150",
+            "required": false
+          },
+          {
+            "id": "CEE 63",
+            "required": false
+          },
+          {
+            "id": "CEE 64",
+            "required": false
+          },
+          {
+            "id": "CEE 70",
+            "required": false
+          },
+          {
+            "id": "CHEM 31A",
+            "required": false
+          },
+          {
+            "id": "CHEM 31B",
+            "required": false
+          },
+          {
+            "id": "CHEM 31X",
+            "required": false
+          },
+          {
+            "id": "CHEM 33",
+            "required": false
+          },
+          {
+            "id": "CHEM 35",
+            "required": false
+          },
+          {
+            "id": "CHEM 131",
+            "required": false
+          },
+          {
+            "id": "EARTHSYS 10",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 25",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 45",
+            "required": false
+          },
+          {
+            "id": "PHYSICS 65",
+            "required": false
+          }
+        ],
+        "instructions": "Choose at least one science elective so that you have at least 12 units total of science. Note: The science elective can be fulfilled with AP Chemistry credit."
+      }
+    ]
+  },
+
+  {
+    "title": "General Electrical Engineering Requirements: Technology in Society",
+    "instructions": "Select one of the following.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "AA 252",
+            "required": false
+          },
+          {
+            "id": "ARCHLGY 151",
+            "required": false
+          },
+          {
+            "id": "BIOE 131",
+            "required": false
+          },
+          {
+            "id": "CEE 102",
+            "required": false
+          },
+          {
+            "id": "CLASSICS 168",
+            "required": false
+          },
+          {
+            "id": "COMM 120W",
+            "required": false
+          },
+          {
+            "id": "COMM 166",
+            "required": false
+          },
+          {
+            "id": "CS 181",
+            "required": false
+          },
+          {
+            "id": "CS 181W",
+            "required": false
+          },
+          {
+            "id": "ENGR 117",
+            "required": false
+          },
+          {
+            "id": "ENGR 131",
+            "required": false
+          },
+          {
+            "id": "ENGR 145",
+            "required": false
+          },
+          {
+            "id": "ENGR 148",
+            "required": false
+          },
+          {
+            "id": "ENGR 248",
+            "required": false
+          },
+          {
+            "id": "HUMBIO 174",
+            "required": false
+          },
+          {
+            "id": "MS&E 193",
+            "required": false
+          },
+          {
+            "id": "ME 267",
+            "required": false
+          },
+          {
+            "id": "POLISCI 114S",
+            "required": false
+          },
+          {
+            "id": "STS 1",
+            "required": false
+          }
+        ],
+        "type": "radio"
+      }
+    ]
+  },
+
+  {
+    "title": "Engineering Topics: Engineering Fundamentals",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 106B",
+            "required": false
+          },
+          {
+            "id": "CS 106X",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Choose one of these Programming Abstractions courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "ENGR 40M",
+            "required": false
+          },
+          {
+            "id": "ENGR 40A",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Choose one of these Introductory Engineering courses."
+      }
+    ]
+  },
+
+  {
+    "title": "Engineering Topics: Core Electrical Engineering Courses",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "EE 100",
+            "required": false
+          },
+          {
+            "id": "EE 101A",
+            "required": true
+          },
+          {
+            "id": "EE 102A",
+            "required": true
+          },
+          {
+            "id": "EE 108",
+            "required": true
+          },
+          {
+            "id": "EE 65",
+            "required": true
+          }
+        ],
+        "instructions": "You must take the following courses (EE 100 is optional)."
+      }
+    ]
+  },
+
+  {
+    "title": "General Computer Science Requirements: Writing in the Major",
+    "instructions": "Select one of the following.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 181W",
+            "required": false
+          },
+          {
+            "id": "CS 191W",
+            "required": false
+          },
+          {
+            "id": "CS 194W",
+            "required": false
+          },
+          {
+            "id": "CS 210B",
+            "required": false
+          },
+          {
+            "id": "CS 294W",
+            "required": false
+          }
+        ],
+        "type": "radio"
+      }
+    ]
+  },
+
+  {
+    "title": "General Computer Science Requirements: Core",
+    "instructions": "You must take the following courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 107",
+            "required": false
+          },
+          {
+            "id": "CS 107E",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Choose one of these Computer Systems courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "CS 110",
+            "required": true
+          },
+          {
+            "id": "CS 161",
+            "required": true
+          }
+        ],
+        "instructions": "These two Core Computer Science courses are required."
+      }
+    ]
+  },
+
+  {
+    "title": "General Computer Science Requirements: Senior Project",
+    "instructions": "Select one of the following.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 191",
+            "required": false
+          },
+          {
+            "id": "CS 191W",
+            "required": false
+          },
+          {
+            "id": "CS 194",
+            "required": false
+          },
+          {
+            "id": "CS 194H",
+            "required": false
+          },
+          {
+            "id": "CS 194W",
+            "required": false
+          },
+          {
+            "id": "CS 210B",
+            "required": false
+          },
+          {
+            "id": "CS 294W",
+            "required": false
+          }
+        ],
+        "type": "radio"
+      }
+    ]
+  }
+]

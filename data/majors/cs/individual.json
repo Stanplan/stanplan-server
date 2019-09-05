@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Individually Designed Track",
+    "instructions": "Students may propose an individually designed track. Proposals should include a minimum of 25 units and seven courses, at least four of which must be CS courses numbered 100 or above. See Handbook for Undergraduate Engineering Programs for further information.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "instructions" : "You must take at least 25 units in total for the Individually Designed track.",
+        "numDefaultRows": 7
+      }
+    ]
+  }
+]

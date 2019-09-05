@@ -1,0 +1,432 @@
+[
+  {
+    "title": "Information Track: Core",
+    "instructions": "You must take the following two courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 124",
+            "required": true
+          },
+          {
+            "id": "CS 145",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Information Track: Area 1 -- Information-based AI applications",
+    "instructions": "You must take two courses, from different areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 224N",
+            "required": false
+          },
+          {
+            "id": "CS 224S",
+            "required": false
+          },
+          {
+            "id": "CS 229",
+            "required": false
+          },
+          {
+            "id": "CS 233",
+            "required": false
+          },
+          {
+            "id": "CS 234",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Information Track: Area 2 -- Database and Information Systems",
+    "instructions": "You must take two courses, from different areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "CS 140E",
+            "required": false
+          },
+          {
+            "id": "CS 142",
+            "required": false
+          },
+          {
+            "id": "CS 151",
+            "required": false
+          },
+          {
+            "id": "CS 245",
+            "required": false
+          },
+          {
+            "id": "CS 246",
+            "required": false
+          },
+          {
+            "id": "CS 341",
+            "required": false
+          }
+        ],
+        "instructions": "Note: You cannot take both CS 140 and CS 140E."
+      }
+    ]
+  },
+
+  {
+    "title": "Information Track: Area 3 -- Information Systems in Biology",
+    "instructions": "You must take two courses, from different areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 270",
+            "required": false
+          },
+          {
+            "id": "CS 274",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Information Track: Area 4 -- Information Systems on the Web",
+    "instructions": "You must take two courses, from different areas.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 224W",
+            "required": false
+          },
+          {
+            "id": "CS 276",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Information Track: Electives",
+    "instructions": "You must take at least three additional courses from the areas previously shown or from the following list.",
+    "section": [
+      {
+        "subsection" : [
+          {
+            "id": "CS 108",
+            "required": false
+          },
+          {
+            "id": "CS 124",
+            "required": false
+          },
+          {
+            "id": "CS 131",
+            "required": false
+          },
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "CS 141",
+            "required": false
+          },
+          {
+            "id": "CS 142",
+            "required": false
+          },
+          {
+            "id": "CS 143",
+            "required": false
+          },
+          {
+            "id": "CS 144",
+            "required": false
+          },
+          {
+            "id": "CS 145",
+            "required": false
+          },
+          {
+            "id": "CS 146",
+            "required": false
+          },
+          {
+            "id": "CS 147",
+            "required": false
+          },
+          {
+            "id": "CS 148",
+            "required": false
+          },
+          {
+            "id": "CS 149",
+            "required": false
+          },
+          {
+            "id": "CS 154",
+            "required": false
+          },
+          {
+            "id": "CS 155",
+            "required": false
+          },
+          {
+            "id": "CS 157",
+            "required": false
+          },
+          {
+            "id": "PHIL 151",
+            "required": false
+          },
+          {
+            "id": "CS 166",
+            "required": false
+          },
+          {
+            "id": "CS 168",
+            "required": false
+          },
+          {
+            "id": "CS 190",
+            "required": false
+          },
+          {
+            "id": "CS 205L",
+            "required": false
+          },
+          {
+            "id": "CS 210A",
+            "required": false
+          },
+          {
+            "id": "CS 217",
+            "required": false
+          },
+          {
+            "id": "CS 223A",
+            "required": false
+          },
+          {
+            "id": "CS 224N",
+            "required": false
+          },
+          {
+            "id": "CS 224S",
+            "required": false
+          },
+          {
+            "id": "CS 224U",
+            "required": false
+          },
+          {
+            "id": "CS 224W",
+            "required": false
+          },
+          {
+            "id": "CS 225A",
+            "required": false
+          },
+          {
+            "id": "CS 227B",
+            "required": false
+          },
+          {
+            "id": "CS 228",
+            "required": false
+          },
+          {
+            "id": "CS 229",
+            "required": false
+          },
+          {
+            "id": "CS 229T",
+            "required": false
+          },
+          {
+            "id": "CS 231A",
+            "required": false
+          },
+          {
+            "id": "CS 232",
+            "required": false
+          },
+          {
+            "id": "CS 233",
+            "required": false
+          },
+          {
+            "id": "CS 234",
+            "required": false
+          },
+          {
+            "id": "CS 238",
+            "required": false
+          },
+          {
+            "id": "CS 240",
+            "required": false
+          },
+          {
+            "id": "CS 242",
+            "required": false
+          },
+          {
+            "id": "CS 243",
+            "required": false
+          },
+          {
+            "id": "CS 244",
+            "required": false
+          },
+          {
+            "id": "CS 244B",
+            "required": false
+          },
+          {
+            "id": "CS 245",
+            "required": false
+          },
+          {
+            "id": "CS 246",
+            "required": false
+          },
+          {
+            "id": "CS 247",
+            "required": false
+          },
+          {
+            "id": "CS 248",
+            "required": false
+          },
+          {
+            "id": "CS 251",
+            "required": false
+          },
+          {
+            "id": "CS 252",
+            "required": false
+          },
+          {
+            "id": "CS 254",
+            "required": false
+          },
+          {
+            "id": "CS 255",
+            "required": false
+          },
+          {
+            "id": "CS 261",
+            "required": false
+          },
+          {
+            "id": "CS 263",
+            "required": false
+          },
+          {
+            "id": "CS 264",
+            "required": false
+          },
+          {
+            "id": "CS 265",
+            "required": false
+          },
+          {
+            "id": "CS 269I",
+            "required": false
+          },
+          {
+            "id": "CS 270",
+            "required": false
+          },
+          {
+            "id": "CS 272",
+            "required": false
+          },
+          {
+            "id": "CS 273A",
+            "required": false
+          },
+          {
+            "id": "CS 273B",
+            "required": false
+          },
+          {
+            "id": "CS 274",
+            "required": false
+          },
+          {
+            "id": "CS 246",
+            "required": false
+          },
+          {
+            "id": "CS 278",
+            "required": false
+          },
+          {
+            "id": "CS 279",
+            "required": false
+          },
+          {
+            "id": "CS 348B",
+            "required": false
+          },
+          {
+            "id": "CS 348C",
+            "required": false
+          },
+          {
+            "id": "CS 348K",
+            "required": false
+          },
+          {
+            "id": "CS 352",
+            "required": false
+          },
+          {
+            "id": "CS 369L",
+            "required": false
+          },
+          {
+            "id": "CME 108",
+            "required": false
+          },
+          {
+            "id": "EE 180",
+            "required": false
+          },
+          {
+            "id": "EE 282",
+            "required": false
+          },
+          {
+            "id": "EE 364A",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "title": "Communication Requirements: Core",
+    "instructions": "You must take these courses in preparation for the Communication major",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "COMM 1",
+            "required": false
+          },
+          {
+            "id": "COMM 1B",
+            "required": false
+          }
+        ],
+        "type": "radio",
+        "instructions": "Choose one of these courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "COMM 106",
+            "required": true
+          }
+        ],
+        "instructions": "You must take this course."
+      },
+      {
+        "subsection": [
+          {
+            "id": "COMM 108",
+            "required": true
+          }
+        ],
+        "instructions": "You must take this course."
+      },
+      {
+        "subsection": [
+          {
+            "id": "COMM 104W",
+            "required": false
+          },
+          {
+            "id": "COMM 120W",
+            "required": false
+          },
+          {
+            "id": "COMM 137W",
+            "required": false
+          },
+          {
+            "id": "COMM 142W",
+            "required": false
+          },
+          {
+            "id": "COMM 143W",
+            "required": false
+          },
+        ],
+        "instructions": "Choose one of these Writing in the Major courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "STATS 60",
+            "required": true
+          }
+        ],
+        "instructions": "You must take this introductory statistics course."
+      }
+    ]
+  },
+
+  {
+    "title": "Communication Requirements: Areas",
+    "instructions": "You must select four courses from these two Areas, with at least one from each Area.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "COMM 121",
+            "required": false
+          },
+          {
+            "id": "COMM 124",
+            "required": false
+          },
+          {
+            "id": "COMM 135",
+            "required": false
+          },
+          {
+            "id": "COMM 145",
+            "required": false
+          },
+          {
+            "id": "COMM 137W",
+            "required": false
+          },
+          {
+            "id": "COMM 162",
+            "required": false
+          },
+          {
+            "id": "COMM 164",
+            "required": false
+          },
+          {
+            "id": "COMM 166",
+            "required": false
+          },
+          {
+            "id": "COMM 172",
+            "required": false
+          },
+          {
+            "id": "COMM 326",
+            "required": false
+          }
+        ],
+        "instructions": "Area 1: Communication Processes and Effects"
+      },
+      {
+        "subsection": [
+          {
+            "id": "COMM 104W",
+            "required": false
+          },
+          {
+            "id": "COMM 116",
+            "required": false
+          },
+          {
+            "id": "COMM 120W",
+            "required": false
+          },
+          {
+            "id": "COMM 125",
+            "required": false
+          },
+          {
+            "id": "COMM 142W",
+            "required": false
+          },
+          {
+            "id": "COMM 143W",
+            "required": false
+          },
+          {
+            "id": "COMM 151",
+            "required": false
+          },
+          {
+            "id": "COMM 152",
+            "required": false
+          },
+          {
+            "id": "COMM 153",
+            "required": false
+          },
+          {
+            "id": "COMM 154",
+            "required": false
+          },
+          {
+            "id": "COMM 157",
+            "required": false
+          },
+          {
+            "id": "COMM 158",
+            "required": false
+          },
+          {
+            "id": "COMM 177I",
+            "required": false
+          },
+          {
+            "id": "COMM 177Y",
+            "required": false
+          }
+        ],
+        "instructions": "Area 2: Communication Systems and Institutions"
+      }
+    ]
+  },
+
+  {
+    "title": "Communication Requirements: Electives",
+    "instructions": "You must take at least 60 units total in the Communication department. The statistics course does not count towards this total. If you have not taken 60 units yet, you should add some Communication electives.",
+    "section": [
+      {
+        "subsection" : [],
+        "type" : "open-ended",
+        "numDefaultRows": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Computer Engineering Track: Core, Part One",
+    "instructions": "You must take the following two courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "EE 108",
+            "required": true
+          },
+          {
+            "id": "EE 180",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Computer Engineering Track: Core, Part Two",
+    "instructions": "You must take two of the following four courses.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "EE 101A",
+            "required": false
+          },
+          {
+            "id": "EE 101B",
+            "required": false
+          },
+          {
+            "id": "EE 102A",
+            "required": false
+          },
+          {
+            "id": "EE 102B",
+            "required": false
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Computer Engineering Track: Concentration 1 -- Digital Systems",
+    "instructions": "You must satisfy the requirements of one of the three concentrations.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "EE 109",
+            "required": false
+          },
+          {
+            "id": "EE 271",
+            "required": false
+          }
+        ],
+        "instructions": "You must take the following three courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "CS 144",
+            "required": false
+          },
+          {
+            "id": "CS 149",
+            "required": false
+          },
+          {
+            "id": "CS 190",
+            "required": false
+          },
+          {
+            "id": "CS 217",
+            "required": false
+          },
+          {
+            "id": "CS 244",
+            "required": false
+          },
+          {
+            "id": "EE 273",
+            "required": false
+          },
+          {
+            "id": "EE 282",
+            "required": false
+          }
+        ],
+        "instructions": "You must take two of the following courses (6-8 units). Note: You can only use CS 140 if it was not counted above."
+      }
+    ]
+  },
+
+  {
+    "title": "Computer Engineering Track: Concentration 2 -- Robotics and Mechatronics",
+    "instructions": "You must satisfy the requirements of one of the three concentrations.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 205L",
+            "required": false
+          },
+          {
+            "id": "CS 223A",
+            "required": false
+          },
+          {
+            "id": "ME 210",
+            "required": false
+          },
+          {
+            "id": "ENGR 105",
+            "required": false
+          }
+        ],
+        "instructions": "You must take the following four courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "CS 225A",
+            "required": false
+          },
+          {
+            "id": "CS 231A",
+            "required": false
+          },
+          {
+            "id": "ENGR 205",
+            "required": false
+          },
+          {
+            "id": "ENGR 207B",
+            "required": false
+          }
+        ],
+        "instructions": "You must take one of the following courses (3-4 units)."
+      }
+    ]
+  },
+
+  {
+    "title": "Computer Engineering Track: Concentration 3 -- Networking",
+    "instructions": "You must satisfy the requirements of one of the three concentrations.",
+    "section": [
+      {
+        "subsection": [
+          {
+            "id": "CS 140",
+            "required": false
+          },
+          {
+            "id": "CS 144",
+            "required": false
+          }
+        ],
+        "instructions": "You must take the following two courses."
+      },
+      {
+        "subsection": [
+          {
+            "id": "CS 240",
+            "required": false
+          },
+          {
+            "id": "CS 241",
+            "required": false
+          },
+          {
+            "id": "CS 244",
+            "required": false
+          },
+          {
+            "id": "CS 244B",
+            "required": false
+          },
+          {
+            "id": "EE 179",
+            "required": false
+          }
+        ],
+        "instructions": "You must take three of the following courses (9-11 units)."
+      }
+    ]
+  }
+]
