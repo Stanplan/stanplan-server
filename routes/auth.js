@@ -12,50 +12,78 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-router.post('/signup', (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
-  let firstName = req.body.firstName;
-  let lastName = req.body.lastName;
-  let gender = req.body.gender;
-  let phone = req.body.phone;
-  let university = req.body.university;
+const MIN_PASSWORD_LENGTH = 6;
+const GENDER_OPTIONS = ['male', 'female', 'non-binary', 'other', 'prefer not to say'];
+const UNIVERSITY_OPTIONS = ['stanford university'];
 
+function isEmailValid(email, errors) {
   if (email === null || email.length < 1) {
-    return res.status(400).json({ error: 'Email not found' });
+    errors.push('Email not found');
   }
+  return errors;
+}
+
+function isPasswordValid(password, errors) {
   if (password === null || password.length < 1) {
-    return res.status(400).json({ error: 'Password not found' });
+    errors.push('Password not found');
   }
-  if (password.length < 6) {
-    return res.status(400).json({ error: 'Password weak' });
+  if (password.length < MIN_PASSWORD_LENGTH) {
+    errors.push(`Password must be at least ${MIN_PASSWORD_LENGTH} characters long`);
   }
+  return errors;
+}
+
+function isFirstNameValid(firstName, errors) {
   if (firstName === null || firstName.length < 1) {
-    return res.status(400).json({ error: 'First name not found' });
+    errors.push('First name not found');
   }
+  return errors;
+}
+
+function isLastNameValid(lastName, errors) {
   if (lastName === null || lastName.length < 1) {
-    return res.status(400).json({ error: 'Last name not found' });
+    errors.push('Last name not found');
   }
-  if (gender !== 'Male' && gender !== 'Female' && gender !== 'Non-binary' &&
-      gender !== 'Other' && gender !== 'Prefer not to say') {
-    return res.status(400).json({ error: 'Gender not found' });
+  return errors;
+}
+
+function isGenderValid(gender, errors) {
+  if (GENDER_OPTIONS.indexOf(gender.toLowerCase()) < 0) {
+    errors.push('Gender not found');
   }
-  if (university !== 'Stanford University') {
-    return res.status(400).json({ error: 'University not found' });
+  return errors;
+}
+
+function isUniversityValid(university, errors) {
+  if (UNIVERSITY_OPTIONS.indexOf(university.toLowerCase()) < 0) {
+    errors.push('University not found');
   }
-  console.log('Signing up: ' + email);
+  return errors;
+}
+
+router.post('/signup', (req, res) => {
+  let { email, password, firstName, lastName, gender, phone, university } = req.body;
+
+  let errors = [];
+  errors = isEmailValid(email, errors);
+  errors = isPasswordValid(password, errors);
+  errors = isFirstNameValid(firstName, errors);
+  errors = isLastNameValid(lastName, errors);
+  errors = isGenderValid(gender, errors);
+  errors = isUniversityValid(university, errors);
+  if (errors.length > 0) {
+    return res.status(400).json({ errors: errors });
+  }
 
   UserController.isEmailTaken(email).then(taken => {
     if (taken) {
-      return res.status(400).json({ error: 'Email already taken' });
+      return res.status(400).json({ errors: ['Email already taken'] });
     }
     bcrypt.hash(password, 10, function (err, hash) {
       if (err) {
-        return res.status(500).json({ error: 'An internal error occurred while hashing the password' });
+        return res.status(500).json({ errors: ['An internal error occurred while hashing the password'] });
       }
       UserController.createUser(email, hash, firstName, lastName, gender, phone, university).then(id => {
-        console.log("Successfully created new user: " + req.body.email);
-
         // TODO: Add confirmation email functionality
         /*var mailOptions = {
           from: 'stanplan294@gmail.com',
@@ -87,37 +115,33 @@ router.post('/signup', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
+  let { email, password } = req.body;
 
-  if (email === null || email.length < 1) {
-    return res.status(400).json({ error: 'Email not found' });
+  let errors = [];
+  errors = isEmailValid(email, errors);
+  errors = isPasswordValid(password, errors);
+  if (errors.length > 0) {
+    return res.status(400).json({ errors: errors });
   }
-  if (password === null || password.length < 1) {
-    return res.status(400).json({ error: 'Password not found' });
-  }
-  console.log('Logging in: ' + email);
 
   UserController.getUserByEmail(email).then(user => {
     if (!user) {
-      return res.status(400).json({ error: 'No user exists with this email' });
+      return res.status(400).json({ errors: ['No user exists with this email'] });
     }
     bcrypt.compare(password, user.hash, (err, result) => {
       if (err) {
-        return res.status(500).json({ error: 'An internal error occurred while hashing the password' });
+        return res.status(500).json({ errors: ['An internal error occurred while hashing the password'] });
       }
       if (!result) {
-        return res.status(400).json({ error: 'The provided password is incorrect' });
+        return res.status(400).json({ errors: ['The provided password is incorrect'] });
       }
       req.session.user = user.id;
-      console.log('Successfully logged in user: ' + req.body.email);
       res.sendStatus(200);
     });
   });
 })
 
 router.post('/logout', (req, res) => {
-  console.log('Logging out: ' + req.session.user);
   req.session.destroy();
   res.sendStatus(200);
 })
