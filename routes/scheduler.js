@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var router = express.Router();
-var courses = require('../data/courses.json');
+var courses = require('../stanford/courses.json');
 var path = require('path');
 var { PythonShell } = require('python-shell');
 
@@ -61,10 +61,10 @@ router.get('/courseoptions', async (req, res) => {
 
   console.log(major + " : " + track);
 
-  let generalEdRequirements = require('../data/generaled.json');
-  let generalRequirements = require('../data/majors/' + major + '/general.json');
-  //let trackRequirements = require('../data/majors/cs/test_blank.json');
-  let trackRequirements = require('../data/majors/' + major  + '/' + track + '.json');
+  let generalEdRequirements = require('../stanford/generaled.json');
+  let generalRequirements = require('../stanford/majors/' + major + '/general.json');
+  //let trackRequirements = require('../stanford/majors/cs/test_blank.json');
+  let trackRequirements = require('../stanford/majors/' + major  + '/' + track + '.json');
   generalEdRequirements = updateJsonCourseData(generalEdRequirements);
   generalRequirements = updateJsonCourseData(generalRequirements);
   trackRequirements = updateJsonCourseData(trackRequirements);
