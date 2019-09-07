@@ -10,7 +10,7 @@ async function post (userID, text) {
   );
 }
 
-async function like (postUserID, postID, userID) {
+/*async function like (postUserID, postID, userID) {
   let postExists = await User.exists({
     id: postUserID,
     posts: {
@@ -46,7 +46,7 @@ async function like (postUserID, postID, userID) {
         this.id,
         this['posts']
           .map( f => f.id )
-          .indexOf(postID) 
+          .indexOf(postID)
       )
     },
     reduce: function() {},
@@ -67,9 +67,8 @@ async function like (postUserID, postID, userID) {
       $push: { }
     }
   );
-}
+}*/
 
 module.exports = {
-  post,
-  like
+  post
 };

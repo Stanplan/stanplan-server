@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var UserController = require('../controllers/UserController');
+var PostController = require('../controllers/PostController');
 
 router.post('/post', (req, res) => {
   let text = req.body.text;
@@ -9,7 +10,7 @@ router.post('/post', (req, res) => {
     return res.status(400).json({ error: 'Text not found' });
   }
 
-  UserController.post(req.session.user, text).then(() => {
+  PostController.post(req.session.user, text).then(() => {
     res.sendStatus(200);
   });
 })
