@@ -10,5 +10,6 @@ router.use('/', require('./scheduler'));
 router.use('/', require('./validator'));
 router.use('/', authRouter);
 router.use('/', require('./post'));
+router.use('/', require('./profile'));
 
 module.exports = router;

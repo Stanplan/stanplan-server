@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
 var PostSchema = require('./PostSchema');
+var { getDefaultPicture } = require('../assets/images/default_profile_picture');
 
 var UserSchema = new Schema({
   id: {
@@ -26,7 +26,7 @@ var UserSchema = new Schema({
   },
   picture: {
     type: String,
-    default: 'adam.svg'
+    default: getDefaultPicture()
   },
   gender: {
     type: String,
