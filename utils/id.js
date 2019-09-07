@@ -1,6 +1,6 @@
 var uuid = require('uuid/v4');
 
-async function isCollision(model, id) {
+async function isCollision (model, id) {
   return await model.countDocuments({ id: id }, (err, count) => {
     if (err) {
       console.error(err);
@@ -13,7 +13,7 @@ async function isCollision(model, id) {
 /*
  * Generates a unique random 128-bit ID
  */
-async function generateID(model) {
+async function generateID (model) {
   let id = null;
   let collision = true;
   while (collision) {

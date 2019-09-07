@@ -1,16 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer');
 var bcrypt = require('bcrypt');
+var sgMail = require('@sendgrid/mail');
 var UserController = require('../controllers/UserController');
+var UnverifiedUserController = require('../controllers/UnverifiedUserController');
+var { generateRandomAlphanumericString } = require('../utils/random');
+var { generateRegistrationEmail } = require('../assets/emails/registration_email');
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_STANPLAN,
-    pass: process.env.GMAIL_STANPLAN_PASSWORD
-  }
-});
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const MIN_PASSWORD_LENGTH = 6;
 const GENDER_OPTIONS = ['male', 'female', 'non-binary', 'other', 'prefer not to say'];
@@ -102,31 +99,25 @@ router.post('/signup', (req, res) => {
         return res.status(500).json({ errors: ['An internal error occurred while hashing the password'] });
       }
       UserController.createUser(email, hash, firstName, lastName, gender, phone, university).then(id => {
-        // TODO: Add confirmation email functionality
-        /*var mailOptions = {
-          from: 'stanplan294@gmail.com',
-          to: email,
-          subject: 'StanPlan: Confirm your email address',
-          html: '<p>Welcome to StanPlan!</p>' +
-                '<br/>' +
-                '<p>Click the button below to confirm that you are the owner of this ' +
-                'email address.</p>' +
-                '<br/>' +
-                '<button type="button">Confirm email</button>' +
-                '<br/>' +
-                '<p>Best,</p>' +
-                '<p>The StanPlan Team</p>'
-        };
 
-        transporter.sendMail(mailOptions, function(error, info) {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log('Email sent: ' + info.response);
+        let confirmationString = generateRandomAlphanumericString(16);
+        bcrypt.hash(confirmationString, 10, function (err, confirmationHash) {
+          if (err) {
+            return res.status(500).json({ errors: ['An internal error occurred while hashing the confirmation string'] });
           }
-        });*/
+          UnverifiedUserController.createUnverifiedUser(email, confirmationHash).then(() => {
+            let verificationURL = process.env.WEB_DOMAIN + `/verified?email=${email}&confirmationString=${confirmationString}`;
+            const msg = {
+              to: email,
+              from: 'support@stanplan.com',
+              subject: 'Stanplan: Activate your account',
+              html: generateRegistrationEmail(`${firstName} ${lastName}`, verificationURL),
+            };
+            sgMail.send(msg);
 
-        res.sendStatus(200);
+            res.sendStatus(200);
+          });
+        });
       });
     });
   });
@@ -153,6 +144,9 @@ router.post('/login', (req, res) => {
       if (!result) {
         return res.status(400).json({ errors: ['The provided password is incorrect'] });
       }
+      if (!user.verified) {
+        return res.status(400).json({ errors: ['Your email address is not yet verified.'] });
+      }
       req.session.user = user.id;
       res.sendStatus(200);
     });
@@ -162,6 +156,30 @@ router.post('/login', (req, res) => {
 router.post('/logout', (req, res) => {
   req.session.destroy();
   res.sendStatus(200);
+})
+
+router.post('/verify', (req, res) => {
+  let { email, confirmationString } = req.body;
+
+  UnverifiedUserController.getUnverifiedUserByEmail(email).then(unverifiedUser => {
+    if (!unverifiedUser) {
+      return res.status(400).json({ errors: ['No unverified user exists with this email'] });
+    }
+    bcrypt.compare(confirmationString, unverifiedUser.confirmationHash, (err, result) => {
+      if (err) {
+        return res.status(500).json({ errors: ['An internal error occurred while hashing the confirmation string'] });
+      }
+      if (!result) {
+        return res.status(400).json({ errors: ['The provided confirmation string is incorrect'] });
+      }
+      UnverifiedUserController.removeUnverifiedUser(email).then(() => {
+        UserController.verifyUserByEmail(email).then(() => {
+          res.session.user = user.id;
+          res.sendStatus(200);
+        });
+      });
+    });
+  });
 })
 
 module.exports = {

@@ -22,13 +22,10 @@ async function createUser (email, hash, firstName, lastName, gender, phone, univ
   return id;
 }
 
-async function post (userID, text) {
-  let id = await generateID(User);
-
-  return await User.updateOne(
-    { id: userID },
-    { $push: { posts: { id: id, text: text } } }
-  );
+async function verifyUserByEmail (email) {
+  await User.updateOne({ email: email }, { verified: true }, (err, res) => {
+    if (err) console.error(err);
+  });
 }
 
 async function getAllUsers () {
@@ -73,7 +70,7 @@ async function isEmailTaken (email) {
 
 module.exports = {
   createUser,
-  post,
+  verifyUserByEmail,
   getAllUsers,
   getUserByID,
   getUserByEmail,

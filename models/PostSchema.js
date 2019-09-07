@@ -8,7 +8,7 @@ var CommentSchema = new Schema({
   },
   timestamp: {
     type: Date,
-    default: new Date()
+    default: Date.now
   },
   likes: {
     type: [String], // Array of user IDs

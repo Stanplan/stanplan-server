@@ -1,6 +1,6 @@
 var express = require('express');
+var { router: authRouter } = require('./auth');
 var router = express.Router();
-var { authRouter: router } = require('./auth');
 
 router.get('/', (req, res) => {
   res.status(200).json({ message: 'Connected!' });

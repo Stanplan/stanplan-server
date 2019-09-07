@@ -1,4 +1,4 @@
-function areArraysEqual(arr1, arr2) {
+function areArraysEqual (arr1, arr2) {
   if (arr1 === null && arr2 !== null) return false;
   if (arr1 !== null && arr2 === null) return false;
   if (arr1 === undefined && arr2 !== undefined) return false;
