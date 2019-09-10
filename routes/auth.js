@@ -14,7 +14,7 @@ const COMMON_PASSWORDS = ['123456', '1234567', '12345678', '123456789', '1234567
 'password', '111111', 'sunshine', 'letmein', 'qwerty', 'iloveyou', 'princess', 'admin',
 'welcome', '666666', 'abc123', 'football', '123123', 'monkey', '654321', '!@#$%^&*',
 '!@#$%^&', '!@#$%^', 'charlie', 'aa123456', 'donald', 'password1', 'qwerty123',
-'starwars', 'dragon', 'passw0rd', 'master', 'stanplan', 'stanford', 'berkeley'
+'starwars', 'dragon', 'passw0rd', 'master', 'stanplan', 'stanford', 'berkeley',
 'university', 'freedom', 'whatever', 'qazwsx', 'trustno1', 'flower', '121212',
 'hottie', 'loveme', 'zaq1zaq1', 'baseball', '1qaz2wsx', 'qwertyuiop', 'adobe123',
 'photoshop', 'ashley', 'bailey', 'mustang', 'access', 'shadow', 'michael',
