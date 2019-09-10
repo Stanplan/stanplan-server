@@ -10,6 +10,18 @@ var { generateRegistrationEmail } = require('../assets/emails/registration_email
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const MIN_PASSWORD_LENGTH = 6;
+const COMMON_PASSWORDS = ['123456', '1234567', '12345678', '123456789', '1234567890',
+'password', '111111', 'sunshine', 'letmein', 'qwerty', 'iloveyou', 'princess', 'admin',
+'welcome', '666666', 'abc123', 'football', '123123', 'monkey', '654321', '!@#$%^&*',
+'!@#$%^&', '!@#$%^', 'charlie', 'aa123456', 'donald', 'password1', 'qwerty123',
+'starwars', 'dragon', 'passw0rd', 'master', 'stanplan', 'stanford', 'berkeley'
+'university', 'freedom', 'whatever', 'qazwsx', 'trustno1', 'flower', '121212',
+'hottie', 'loveme', 'zaq1zaq1', 'baseball', '1qaz2wsx', 'qwertyuiop', 'adobe123',
+'photoshop', 'ashley', 'bailey', 'mustang', 'access', 'shadow', 'michael',
+'superman', 'batman', 'azerty', '987654321', '87654321', '7654321', '0987654321',
+'mynoob', '18atcskd2w', '777777', '7777777', '1q2w3e4r', '555555', '444444', '333333',
+'222222', '111111', '000000', '999999', '888888', '3rjs1la7qe', 'tafuna123',
+'1q2w3e', '1q2w3e4r5t', 'ilovekimora', 'superman2231', 'bebepogi', 'planstan', '123abc'];
 const GENDER_OPTIONS = ['male', 'female', 'non-binary', 'other', 'prefer not to say'];
 const UNIVERSITY_OPTIONS = ['stanford university'];
 const NAME_REGEX = /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s'.-]+$/;
@@ -30,6 +42,8 @@ function isPasswordValid(password, errors) {
     errors.push('Password not found');
   } else if (password.length < MIN_PASSWORD_LENGTH) {
     errors.push(`Password must be at least ${MIN_PASSWORD_LENGTH} characters long`);
+  } else if (COMMON_PASSWORDS.indexOf(password) >= 0) {
+    errors.push(`That password is too common`);
   }
   return errors;
 }

@@ -6,6 +6,7 @@ const expectedResults = [
   ['Invalid email entered'],
   [],
   ['Password not found'],
+  ['That password is too common'],
   [`Password must be at least 6 characters long`],
   [],
   ['First name not found'],
@@ -67,7 +68,15 @@ function testAuthValidation() {
   printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
   testNumber++;
 
-  errors = isPasswordValid('abcdef', []);
+  errors = isPasswordValid('abc123', []);
+  testResult = areArraysEqual(errors, expectedResults[testNumber]);
+  if (!testResult) {
+    numErrors++;
+  }
+  printTestResult(testNumber, testResult, errors, expectedResults[testNumber]);
+  testNumber++;
+
+  errors = isPasswordValid('rickygrannisvu', []);
   testResult = areArraysEqual(errors, expectedResults[testNumber]);
   if (!testResult) {
     numErrors++;
