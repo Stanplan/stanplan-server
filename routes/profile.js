@@ -8,7 +8,7 @@ router.get('/profile', (req, res) => {
   }
 
   UserController.getUserByID(req.session.user).then(user => {
-    res.status(200).json({ name: `${user.firstName} ${user.lastName}`, bio: user.bio, picture: user.picture });
+    res.status(200).json({ id: user.id, name: `${user.firstName} ${user.lastName}`, bio: user.bio });
   });
 })
 

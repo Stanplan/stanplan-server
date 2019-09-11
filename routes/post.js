@@ -21,7 +21,24 @@ router.get('/posts', (req, res) => {
   }
 
   UserController.getUserByID(req.session.user).then(user => {
-    res.status(200).json({ firstName: user.firstName, lastName: user.lastName, picture: user.picture, posts: user.posts });
+    let posts = [];
+
+    let lastDownloadTime = req.query.lastDownloadTime;
+    if (lastDownloadTime === 'null') { // null parameter is stringified by query string
+      posts = user.posts;
+    } else {
+      for (let i = 0; i < user.posts.length; i++) {
+        if (new Date(user.posts[i].timestamp) - new Date(lastDownloadTime) > 0) {
+          posts.push(user.posts[i]);
+        }
+      }
+    }
+
+    if (posts.length > 0) {
+      res.status(200).json({ id: user.id, firstName: user.firstName, lastName: user.lastName, posts: posts });
+    } else {
+      res.status(200).json({ posts: [] });
+    }
   })
 })
 
