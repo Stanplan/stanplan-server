@@ -27,6 +27,9 @@ var UserSchema = new Schema({
     type: String,
     required: true
   },
+  birthday: {
+    type: String
+  },
   phone: {
     type: String
   },
@@ -44,6 +47,38 @@ var UserSchema = new Schema({
   posts: {
     type: [PostSchema],
     default: []
+  },
+  classYear: {
+    type: Number
+  },
+  majors: {
+    type: [String],
+    default: []
+  },
+  minors: {
+    type: [String],
+    default: []
+  },
+  clubs: {
+    type: [String],
+    default: []
+  },
+  interests: {
+    type: [String],
+    default: []
+  },
+  hometown: {
+    type: String
+  },
+  currentResidence: {
+    type: String
+  },
+  jobs: {
+    type: [String],
+    default: []
+  },
+  website: {
+    type: String
   }
 });
 
