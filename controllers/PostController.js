@@ -6,11 +6,11 @@ async function post (userID, text) {
 
   return await User.updateOne(
     { id: userID },
-    { $push: { posts: { id: id, text: text } } }
+    { $push: { posts: { id: id, owner: userID, text: text } } }
   );
 }
 
-/*async function like (postUserID, postID, userID) {
+async function like (postUserID, postID, userID) {
   let postExists = await User.exists({
     id: postUserID,
     posts: {
@@ -40,7 +40,7 @@ async function post (userID, text) {
     return false; // User can't like post twice
   }
 
-  await User.mapReduce({
+  console.log(await User.mapReduce({
     map: function() {
       emit(
         this.id,
@@ -51,24 +51,10 @@ async function post (userID, text) {
     },
     reduce: function() {},
     query: { "posts.id": postID }
-  });
-
- $push: { posts: { id: id, text: text } } }
-  await User.updateOne(
-    {
-      id: postUserID,
-      posts: {
-        $elemMatch: {
-          id: postID
-        }
-      }
-    },
-    {
-      $push: { }
-    }
-  );
-}*/
+  }));
+}
 
 module.exports = {
-  post
+  post,
+  like
 };

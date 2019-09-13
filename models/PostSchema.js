@@ -2,6 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
+  owner: {
+    type: String,
+    required: true
+  },
   text: {
     type: String,
     required: true
@@ -18,6 +22,10 @@ var CommentSchema = new Schema({
 
 var PostSchema = new Schema({
   id: {
+    type: String,
+    required: true
+  },
+  owner: {
     type: String,
     required: true
   },

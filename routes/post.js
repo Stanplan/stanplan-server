@@ -4,6 +4,10 @@ var UserController = require('../controllers/UserController');
 var PostController = require('../controllers/PostController');
 
 router.post('/post', (req, res) => {
+  if (req.session.user === undefined) {
+    res.sendStatus(400);
+  }
+
   let text = req.body.text;
 
   if (text === null || text.length < 1) {
@@ -14,6 +18,16 @@ router.post('/post', (req, res) => {
     res.sendStatus(200);
   });
 })
+
+async function preparePostData(posts) {
+  let newPosts = JSON.parse(JSON.stringify(posts));
+  for (let i = 0; i < newPosts.length; i++) {
+    let user = await UserController.getUserByID(newPosts[i].owner);
+    newPosts[i].firstName = user.firstName;
+    newPosts[i].lastName = user.lastName;
+  }
+  return newPosts;
+}
 
 router.get('/posts', (req, res) => {
   if (req.session.user === undefined) {
@@ -35,10 +49,25 @@ router.get('/posts', (req, res) => {
     }
 
     if (posts.length > 0) {
-      res.status(200).json({ id: user.id, firstName: user.firstName, lastName: user.lastName, posts: posts });
+      preparePostData(posts).then(newPosts => {
+        res.status(200).json({ posts: newPosts });
+      });
     } else {
       res.status(200).json({ posts: [] });
     }
+  })
+})
+
+router.post('/like', (req, res) => {
+  if (req.session.user === undefined) {
+    res.sendStatus(400);
+  }
+
+  let { postUserID, postID } = req.body;
+
+  PostController.like(postUserID, postID, req.session.user)
+  .then(() => {
+    res.status(200).json({});
   })
 })
 
