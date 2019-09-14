@@ -31,7 +31,7 @@ async function verifyUserByEmail (email) {
 const profileFields = ['bio', 'gender', 'city', 'state', 'country', 'currentResidence', 'classYear', 'majors', 'minors', 'clubs', 'interests', 'jobs', 'website'];
 
 async function updateProfileField (id, field, value) {
-  if (profileFields.indexOf(field.toLowerCase()) < 0) {
+  if (profileFields.indexOf(field) < 0) {
     throw(new Error('This profile field either cannot be updated or does not exist: ' + field));
   }
   await User.updateOne({ id: id }, { [field]: value }, (err, res) => {
