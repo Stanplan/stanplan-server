@@ -26,4 +26,14 @@ router.get('/profile', (req, res) => {
   });
 })
 
+router.post('/updateprofile', (req, res) => {
+  if (req.session.user === undefined) {
+    res.sendStatus(400);
+  }
+
+  UserController.updateProfileField(req.session.user, req.body.field, req.body.value).then(() => {
+    res.sendStatus(200);
+  });
+})
+
 module.exports = router;

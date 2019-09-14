@@ -28,6 +28,17 @@ async function verifyUserByEmail (email) {
   });
 }
 
+const profileFields = ['bio', 'hometown', 'currentResidence', 'university', 'classYear', 'majors', 'minors', 'clubs', 'interests', 'jobs', 'website'];
+
+async function updateProfileField (id, field, value) {
+  if (profileFields.indexOf(field) < 0) {
+    throw(new Error('This profile field either cannot be updated or does not exist: ' + field));
+  }
+  await User.updateOne({ id: id }, { [field]: value }, (err, res) => {
+    if (err) console.error(err);
+  });
+}
+
 async function getAllUsers () {
   return await User.find({}, (err, users) => {
     if (err) {
@@ -70,6 +81,7 @@ async function isEmailTaken (email) {
 
 module.exports = {
   createUser,
+  updateProfileField,
   verifyUserByEmail,
   getAllUsers,
   getUserByID,
