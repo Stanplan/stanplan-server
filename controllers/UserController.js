@@ -10,9 +10,9 @@ async function createUser (email, hash, firstName, lastName, gender, phone, univ
     hash: hash,
     firstName: firstName,
     lastName: lastName,
-    gender: gender,
+    gender: gender.toLowerCase(),
     phone: phone,
-    university: university,
+    university: university.toLowerCase(),
     verified: false
   });
 
@@ -28,10 +28,10 @@ async function verifyUserByEmail (email) {
   });
 }
 
-const profileFields = ['bio', 'hometown', 'currentResidence', 'university', 'classYear', 'majors', 'minors', 'clubs', 'interests', 'jobs', 'website'];
+const profileFields = ['bio', 'gender', 'city', 'state', 'country', 'currentResidence', 'classYear', 'majors', 'minors', 'clubs', 'interests', 'jobs', 'website'];
 
 async function updateProfileField (id, field, value) {
-  if (profileFields.indexOf(field) < 0) {
+  if (profileFields.indexOf(field.toLowerCase()) < 0) {
     throw(new Error('This profile field either cannot be updated or does not exist: ' + field));
   }
   await User.updateOne({ id: id }, { [field]: value }, (err, res) => {

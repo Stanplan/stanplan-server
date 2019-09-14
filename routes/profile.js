@@ -18,7 +18,9 @@ router.get('/profile', (req, res) => {
       minors: user.minors,
       clubs: user.clubs,
       interests: user.interests,
-      hometown: user.hometown,
+      city: user.city,
+      state: user.state,
+      country: user.country,
       currentResidence: user.currentResidence,
       jobs: user.jobs,
       website: user.website
