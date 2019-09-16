@@ -28,6 +28,9 @@ async function verifyUserByEmail (email) {
   });
 }
 
+// NOTE: Doesn't include name, email, or university -- these should not be changed so cavalierly!
+// We can allow the user to change their name or email through some other form, with some form of verification for email at least.
+// University should not be changed by the user, except if the user transfers. In this case, the user should get a new API key from their new university.
 const profileFields = ['bio', 'gender', 'city', 'state', 'country', 'currentResidence', 'classYear', 'majors', 'minors', 'clubs', 'interests', 'jobs', 'website'];
 
 async function updateProfileField (id, field, value) {
