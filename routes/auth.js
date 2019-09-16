@@ -89,6 +89,14 @@ function isUniversityValid(university, errors) {
   return errors;
 }
 
+/*
+ * Step 1: Check if the data provided at signup is valid.
+ * Step 2: Check if the email address provided by the user is already in use.
+ * Step 3: Hash the password. Store the hash and the user's signup data in the database.
+ * Step 4: Send an activation email to the user's email address. The user can't log in until they activate their account.
+ *
+ * TODO: Set up SendGrid with our DNS host. Activation emails can't be sent until this is set up.
+ */
 router.post('/signup', (req, res) => {
   let { email, password, firstName, lastName, gender, phone, university } = req.body;
 
@@ -137,6 +145,12 @@ router.post('/signup', (req, res) => {
   });
 })
 
+/*
+ * Step 1: Check if the data provided at login is valid.
+ * Step 2: Check if the login credentials are linked to a user's account.
+ * Step 3: Check if the user's account is activated (if their email address is verified).
+ * Step 4: If all checks pass, then set the current session to the user's ID.
+ */
 router.post('/login', (req, res) => {
   let { email, password } = req.body;
 
