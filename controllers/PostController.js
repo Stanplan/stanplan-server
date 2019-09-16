@@ -10,6 +10,9 @@ async function post (userID, text) {
   );
 }
 
+/*
+ * TODO: This function is currently WIP. Ricky is working on finishing it up.
+ */
 async function like (postUserID, postID, userID) {
   let postExists = await User.exists({
     id: postUserID,
